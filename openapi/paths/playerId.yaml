@@ -1,0 +1,6 @@
+get:
+  $ref: './player/get.yaml'
+# patch:
+#   $ref: './player/patch.yaml'
+# put:
+#   $ref: './player/put.yaml'

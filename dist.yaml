@@ -1,0 +1,61 @@
+openapi: 3.0.2
+info:
+  title: FUT Champions API
+  description: ''
+  version: 1.0.4
+  termsOfService: 'https://futchamp.org/terms'
+  contact:
+    name: FUT Champions API
+    url: 'https://futchamps.org/api'
+    email: contact.api@futchamp.org
+  license:
+    name: CC Attribution-ShareAlike 4.0 (CC BY-SA 4.0)
+    url: 'https://futchamp.org/price'
+  x-logo:
+    url: >-
+      https://media.contentapi.ea.com/content/dam/ea/easports/fifa/news-media/2018/jan/24/FUT-Champions.png.adapt.crop191x100.628p.png
+servers:
+  - url: 'https://api.futchamp.org/data/2.5'
+paths:
+  '/player/{playerId}':
+    get:
+      get:
+        tags:
+          - Current Player Data
+        summary: Detailed Player stats
+        description: All the details about the relevant player
+        operationId: GetCurrentPlayerData
+        parameters:
+          - $ref: ./player.yaml
+        responses:
+          '200':
+            description: Successful response
+            content:
+              application/json:
+                schema:
+                  $ref: ../../components/schemas/200.yaml
+          '404':
+            description: Player Not Found
+            content:
+              application/problem+json:
+                schema:
+                  $ref: ../../components/schemas/404.yaml
+security:
+  - app_id: []
+tags:
+  - name: Current Player Data
+    description: Get all the relevant data about the given player
+externalDocs:
+  description: API Documentation
+  url: 'https://openweathermap.org/api'
+components:
+  securitySchemes:
+    token:
+      type: api_token
+      description: >-
+        API key to authorize requests. (If you don't have an API key, get one at
+        https://openweathermap.org/. See
+        https://idratherbewriting.com/learnapidoc/docapis_get_auth_keys.html for
+        details.)
+      name: appid
+      in: query

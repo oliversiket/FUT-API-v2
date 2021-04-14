@@ -1,0 +1,2 @@
+/player/{playerId}:
+  $ref: './playerId.yaml'

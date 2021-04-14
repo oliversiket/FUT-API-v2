@@ -1,0 +1,20 @@
+description: Player not found
+type: object
+properties:
+  title:
+    type: string
+    minLength: 1
+    description: |
+      A summary of the problem that has occurred. Not a printf-format string.
+    example: "Player not found"
+  cod:
+    type: integer
+    description: Internal parameter
+    format: int32
+    example: 404
+  # detail:
+  #   type: string
+  #   minLength: 1
+  #   description: |
+  #     A short description of the problem that has occurred. Can include information specific to this error instance.
+  #   example: "User ID 12345 not found"

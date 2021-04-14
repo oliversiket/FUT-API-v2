@@ -1,0 +1,22 @@
+put:
+  tags:
+    - Current Player Data
+  summary: Detailed Player stats
+  description: >-
+    All the details about the relevant player
+  operationId: CurrentPlayerData
+  parameters:
+    - $ref: ../../components/parameters/id.yaml
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            $ref: ../../components/schemas/200.yaml
+    '404':
+          description: Player Not Found
+          content:
+            application/problem+json:
+              schema:
+                $ref: '../../components/schemas/404.yaml'

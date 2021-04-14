@@ -1,0 +1,9 @@
+patch:
+  tags:
+    - Current Player Data
+  summary: Detailed Player stats
+  description: >-
+    All the details about the relevant player
+  operationId: CurrentPlayerData
+  parameters:
+    - $ref: ../../components/parameters/id.yaml
