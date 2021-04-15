@@ -24,15 +24,13 @@ tags:
     description: Get all the relevant data about the given player
 externalDocs:
   description: API Documentation
-  url: 'https://openweathermap.org/api'
+  url: 'https://futchamp.org/api'
 components:
   securitySchemes:
     token:
       type: api_token
       description: >-
         API key to authorize requests. (If you don't have an API key, get one at
-        https://openweathermap.org/. See
-        https://idratherbewriting.com/learnapidoc/docapis_get_auth_keys.html for
-        details.)
+        https://futchamp.org/.
       name: appid
       in: query

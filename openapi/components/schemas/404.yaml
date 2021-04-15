@@ -12,9 +12,3 @@ properties:
     description: Internal parameter
     format: int32
     example: 404
-  # detail:
-  #   type: string
-  #   minLength: 1
-  #   description: |
-  #     A short description of the problem that has occurred. Can include information specific to this error instance.
-  #   example: "User ID 12345 not found"
