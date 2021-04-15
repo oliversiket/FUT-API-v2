@@ -2,4 +2,4 @@ title: Player
 type: object
 properties:
   name:
-    $ref: './Name.yaml'
+    $ref: '#/../../../components/schemas/Name.yaml'
